@@ -7,27 +7,24 @@ from sentinel_scheduler import SentinelScheduler
 FLEET_URLS = [
     "https://qatesting-store.preview.emergentagent.com/",
     "https://www.saucedemo.com/",
-    "http://www.uitestingplayground.com/"
+    "http://www.uitestingplayground.com/",
+    "https://browserwire.io/"
 ]
 
 def main():
     print("🛡️ Sentinel QA: Autonomous Reliability Engineer Starting...")
     state = SentinelState()
     engine = SentinelQAEngine()
-    scheduler = SentinelScheduler(cron_expression='*/10 * * * *')
+    scheduler = SentinelScheduler(cron_expression='*/5 * * * *') # High-frequency 5-min cadence
 
     while True:
         print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Starting fleet-wide reliability audit...")
         for url in FLEET_URLS:
             results = engine.run_scan(url)
-            # AI Diagnosis and state updates happen inside engine/state
         
         next_run = scheduler.get_next_run()
         print(f"Audit complete. Next autonomous run at: {next_run}")
-        
-        # In production, this would be managed by a task scheduler like Celery or GitHub Actions.
-        # For the demo, we maintain the 10-minute heartbeat.
-        time.sleep(600) 
+        time.sleep(300) # Sleep for 5 minutes
 
 if __name__ == '__main__':
     main()
