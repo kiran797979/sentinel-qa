@@ -3,6 +3,14 @@
     {
       "url": "https://qatesting-store.preview.emergentagent.com/",
       "health_score": 15
+    },
+    {
+      "url": "https://www.saucedemo.com/",
+      "health_score": 100
+    },
+    {
+      "url": "http://www.uitestingplayground.com/",
+      "health_score": 100
     }
   ],
   "bugs": [
@@ -12,5 +20,8 @@
       "description": "Broken Checkout",
       "severity": "CRITICAL"
     }
-  ]
+  ],
+  "notification_settings": {
+    "channel": "telegram"
+  }
 }
