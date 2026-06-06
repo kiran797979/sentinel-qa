@@ -1,27 +1,16 @@
 {
   "websites": [
-    {
-      "url": "https://qatesting-store.preview.emergentagent.com/",
-      "health_score": 15
-    },
-    {
-      "url": "https://www.saucedemo.com/",
-      "health_score": 100
-    },
-    {
-      "url": "http://www.uitestingplayground.com/",
-      "health_score": 100
-    }
+    { "url": "https://qatesting-store.preview.emergentagent.com/", "name": "ShopSphere", "health_score": 15 },
+    { "url": "https://www.saucedemo.com/", "name": "Swag Labs", "health_score": 100 },
+    { "url": "http://www.uitestingplayground.com/", "name": "UI Playground", "health_score": 100 },
+    { "url": "https://browserwire.io/", "name": "BrowserWire", "health_score": 100 }
   ],
   "bugs": [
-    {
-      "id": "BUG-001",
-      "page": "Checkout",
-      "description": "Broken Checkout",
-      "severity": "CRITICAL"
-    }
+    { "id": "BUG-001", "severity": "CRITICAL", "status": "OPEN", "description": "Broken Checkout" },
+    { "id": "BUG-002", "severity": "CRITICAL", "status": "OPEN", "description": "Add-to-Cart Failure" }
   ],
-  "notification_settings": {
-    "channel": "telegram"
+  "config": {
+    "cadence_minutes": 5,
+    "timezone": "Asia/Kolkata"
   }
 }
