@@ -1,0 +1,12 @@
+.env
+*.log
+__pycache__/
+*.pyc
+.pytest_cache/
+.vscode/
+.idea/
+auth_tokens.json
+secrets.json
+*.png
+*.jpg
+*.jpeg
