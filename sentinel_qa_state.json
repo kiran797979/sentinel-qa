@@ -1,0 +1,16 @@
+{
+  "websites": [
+    {
+      "url": "https://qatesting-store.preview.emergentagent.com/",
+      "health_score": 15
+    }
+  ],
+  "bugs": [
+    {
+      "id": "BUG-001",
+      "page": "Checkout",
+      "description": "Broken Checkout",
+      "severity": "CRITICAL"
+    }
+  ]
+}
